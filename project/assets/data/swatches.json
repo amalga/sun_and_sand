@@ -1,0 +1,91 @@
+[{
+        "sku": "1111",
+        "color": "Red",
+        "size": "L",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    },
+    {
+        "sku": "2222",
+        "color": "Red",
+        "size": "S",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    },
+    {
+        "sku": "3333",
+        "color": "Red",
+        "size": "XL",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    },
+    {
+        "sku": "4444",
+        "color": "Red",
+        "size": "M",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    },
+    {
+        "sku": "5555",
+        "color": "Blue",
+        "size": "L",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    }, {
+        "sku": "6666",
+        "color": "Blue",
+        "size": "S",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    }, {
+        "sku": "7777",
+        "color": "Blue",
+        "size": "XL",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    }, {
+        "sku": "8888",
+        "color": "Blue",
+        "size": "M",
+        "qty": 0,
+        "in_stock": false,
+        "price": 100
+    },
+    {
+        "sku": "9999",
+        "color": "Green",
+        "size": "L",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    }, {
+        "sku": "1010",
+        "color": "Green",
+        "size": "S",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    }, {
+        "sku": "1011",
+        "color": "Green",
+        "size": "XL",
+        "qty": 0,
+        "in_stock": false,
+        "price": 100
+    }, {
+        "sku": "1012",
+        "color": "Green",
+        "size": "M",
+        "qty": 3,
+        "in_stock": true,
+        "price": 100
+    }
+]
