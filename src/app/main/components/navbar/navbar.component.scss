@@ -1,0 +1,95 @@
+@import './../../../../assets/scss/variables';
+.navbar {
+  border-bottom: 1px solid #e1e1e1;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.navbar {
+  background: #fff !important;
+}
+
+.nav-ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  li {
+    padding: 0;
+  }
+}
+
+.currency-dropdown {
+  a,
+  button {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+
+    color: $textBlack;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  img {
+    height: 12px;
+    width: 19px;
+    margin-right: 10px;
+  }
+}
+
+.row {
+  width: 100%;
+}
+
+.logo-container {
+  img {
+    display: block;
+    margin: 10px auto;
+  }
+@media screen and (max-width: 991px){
+  margin-left: 0;
+}
+}
+
+
+.btn-cart{
+    margin-left: auto;
+    padding: 8px 25px;
+    border: 1px solid $mainOrange;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.dropdown-item{
+    font-size: 12px;
+}
+
+.l-border{
+    border-left: 1px dotted $lightGrey;
+}
+
+.dropdown-menu{
+  z-index: 1050;
+}
+  
+
+@media screen and (min-width: 991px){
+  // .p-left-0{
+  //   padding-left: 0;
+  // }
+}

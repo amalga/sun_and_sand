@@ -1,0 +1,110 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-7">
+      <ngx-gallery
+        [options]="galleryOptions"
+        [images]="galleryImages"
+      ></ngx-gallery>
+    </div>
+    <div class="col-lg-5">
+      <a class="link-back" href="#">
+        <i class="fas fa-angle-left"></i> Back to <span>Woman</span>
+      </a>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="font-weight-bolder">The Atelier Tailored Coat</h3>
+          <div class="row">
+            <div class="col-12">
+              <ul class="rating-list">
+                <li>
+                  <rating
+                    [(ngModel)]="rate"
+                    [max]="5"
+                    [readonly]="true"
+                    style="color: #ded3aa;font-size: 25px;"
+                  ></rating>
+                </li>
+                <li>3 Review(s)</li>
+                <li><a href="#">Add A Review</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="price">$499.00</h3>
+
+        <div class="item-info">
+            <p>Availability : <span>In Stock</span></p>
+            <p>Product Code : <span>#4657</span></p>
+            <p>Tags : <span>Fashion, Hood, Classic</span></p>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 item-description">
+          <p>
+            Sleek, polished, and boasting an impeccably modern fit, this blue,
+            2-but- ton Lazio suit features a notch lapel, flap pockets, and
+            accompanying flat front trousers—all in pure wool by Vitale Barberis
+            Canonico.
+          </p>
+          <ul>
+            <li>
+              Dark blue suit for a tone-on-tone look
+            </li>
+            <li>
+              Regular fit
+            </li>
+            <li>
+              100% Cotton
+            </li>
+            <li>
+              Free shipping with 4 days delivery
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form (ngSubmit)="addToCartSubmit($event)" [formGroup]="addToCartForm" #addToCartNgForm="ngForm" id="addToCartForm" novalidate>
+        <div class="form-row item-form">
+          <div class="form-group col-md-5">
+            <label for="color">Color</label>
+            <select id="color" class="form-control" (change)="onChangeColor($event.target.value)" formControlName="color" [(ngModel)]="itemModel.color" required>
+              <option selected disabled value="">Select Color</option>
+              <option *ngFor="let color of colorSrc" [ngValue]="color.color" [disabled]="in_stock">{{color.color}}</option>
+            </select>
+          </div>
+          <div class="form-group col-md-5">
+            <label for="size">Size</label>
+            <select id="size" [(ngModel)]="itemModel.size" (change)="onChangeSize($event.target.value)"  formControlName="size" class="form-control" required>
+              <option selected value="" disabled>Select Size</option>
+              <option *ngFor="let size of sizeSrc" [ngValue]="size.size" [disabled]="in_stock">{{size.size}}</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="qty">Qty</label>
+            <input type="number" [(ngModel)]="itemModel.qty" formControlName="qty"  class="form-control" id="qty" min="1"  required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-3">
+            <button type="submit" [disabled]="!addToCartNgForm.valid" class="btn  btn-wishlist" >Add to Cart</button>
+            <button [ngClass]="{'btn-danger': isWishListed}" type="button" class="btn ml-2 " (click)="addToWishList()">
+              <span *ngIf="!isWishListed; else wishlisted">
+            <i class="far fa-heart"></i> Add to wishlist
+              </span>
+              <ng-template #wishlisted>
+                  <span >
+            <i class="fas fa-heart"></i> 
+             Wishlisted
+                  </span>
+              </ng-template>
+             
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

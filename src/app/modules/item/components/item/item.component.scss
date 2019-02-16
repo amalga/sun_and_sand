@@ -1,0 +1,124 @@
+@import "./../../../../../assets/scss/variables";
+
+:host ::ng-deep .ngx-gallery-thumbnail.ngx-gallery-active {
+  opacity: 0.5;
+}
+
+.link-back {
+  display: block;
+  margin-bottom: 25px;
+
+  color: #999;
+
+  color: $lightGrey;
+  span {
+    color: $textBlue;
+  }
+}
+
+.rating-list {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:nth-of-type(2) {
+      color: $lightGrey;
+    }
+    &:nth-of-type(3) {
+      padding-left: 0;
+    }
+
+    a {
+      padding-left: 8px;
+      color: $textBlack;
+      text-decoration: underline;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      border-left: 1px solid $lightGrey;
+      line-height: 16px;
+    }
+  }
+}
+
+
+.price{
+    margin-bottom: 20px;
+    color: $textBlue;
+}
+.item-info{
+    margin-bottom: 20px;
+    p{
+        margin-bottom: 0;
+        color: $textBlack;
+        font-weight: 600;
+    }
+    span {
+        color: $textBlue;
+        font-weight: 400;
+    }
+}
+.item-description{
+    margin-bottom: 10px;
+    color: $lightGrey;
+    p{
+
+    }
+    ul{
+        padding-left: 20px;
+    }
+}
+
+.item-form{
+
+    label{
+        color: $textBlack;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .form-control{
+        border-radius: 0;
+    }
+}
+
+.btn-wishlist{
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  &:hover{            
+      background-color: rgba(#000, .7);
+      border-color: rgba(#000, .7);
+  }
+  &:focus{
+
+      box-shadow: 0 0 0 0.2rem rgba(#000, .5);
+  }
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active,
+  .show > &.dropdown-toggle {
+      color: #fff;
+      background-color: darken(#000, 10%);
+      border-color: darken(#000, 10%);
+      box-shadow: 0 0 0 0.2rem rgba(#000, .5);
+  }
+  &:disabled{
+    pointer-events: none;
+  }
+
+}
+
+.btn-danger{
+  border-radius: 0;
+}

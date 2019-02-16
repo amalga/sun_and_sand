@@ -1,0 +1,143 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col order-lg-1  order-2 col-sm col-6 d-flex align-items-center ">
+        <span class="position-relative currency-dropdown" dropdown>
+          <button 
+            class="btn dropdown-toggle"
+            href
+            id="basic-link"
+            dropdownToggle
+            (click)="(false)"
+            aria-controls="women-dropdown"
+            ><img src="{{SelectedCurrency.img}}" alt=""> {{SelectedCurrency.value}}
+          </button>
+          <ul
+            id="women-dropdown"
+            *dropdownMenu
+            class="dropdown-menu"
+            role="menu"
+            aria-labelledby="basic-link"
+          >
+            <li *ngFor="let currency of Currencies; let i=index">
+              <a class="dropdown-item" (click)="onChangeCurrency(i)"><img src="{{currency.img}}" alt=""> {{ currency.value }}</a>
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div class="col order-lg-2 order-1 d-flex align-items-center logo-container p-left-0">
+        <img src="./assets/images/sss_logo.png" alt="">
+      </div>
+      <div class="col-sm col-6 order-2 d-flex align-items-center pr-0">
+        <button class="btn btn-cart">
+          Cart ({{cartCount}})
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <button
+      (click)="isCollapsed = !isCollapsed"
+      class="btn d-lg-none d-md-block d-block"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+    <i class="fas fa-bars"></i>
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      [collapse]="isCollapsed"
+    >
+      <ul class="nav-ul d-lg-flex d-md-none d-none">
+        <li>
+          <button class="btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <span class="position-relative" dropdown>
+            <a
+              class="nav-link dropdown-toggle"
+              href
+              id="basic-link"
+              dropdownToggle
+              (click)="(false)"
+              aria-controls="men-dropdown"
+              >Men</a
+            >
+            <ul
+              id="men-dropdown"
+              *dropdownMenu
+              class="dropdown-menu"
+              role="menu"
+              aria-labelledby="basic-link"
+            >
+              <li *ngFor="let link of Links">
+                <a class="dropdown-item" [routerLink]="link.Link">{{ link.Name }}</a>
+              </li>
+            </ul>
+          </span>
+        </li>
+        <li class="nav-item dropdown">
+          <span class="position-relative" dropdown>
+            <a
+              class="nav-link dropdown-toggle"
+              href
+              id="basic-link"
+              dropdownToggle
+              (click)="(false)"
+              aria-controls="women-dropdown"
+              >Women</a
+            >
+            <ul
+              id="women-dropdown"
+              *dropdownMenu
+              class="dropdown-menu"
+              role="menu"
+              aria-labelledby="basic-link"
+            >
+              <li *ngFor="let link of Links">
+                <a class="dropdown-item" [routerLink]="link.Link">{{ link.Name }}</a>
+              </li>
+            </ul>
+          </span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lookbook</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+      </ul>
+      <ul class="nav-ul">
+        <li>
+          <button class="btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </li>
+        <li>
+          <button class="btn l-border">
+            <i class="fas fa-search"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
