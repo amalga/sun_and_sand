@@ -1,27 +1,42 @@
-# Project
+# Sun and Sand Sports Item Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
+This project is a single page application using Angular 7.1 demonstrating an item page.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In order to run this application you need to have nodeJS installed in your machine as well as GIT
 
-## Code scaffolding
+#### Installing angular-cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> _Note_: you can skip this part if you already have  angular-cli in your machine
 
-## Build
+```bash
+npm i -g @angular/cli
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Clone the project in your local machine
 
-## Running unit tests
+Open a cmd window in the destination folder and clone the repo localy
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/amalga/sun_and_sand.git
+```
+move to project folder
 
-## Running end-to-end tests
+```bash
+cd sun_and_sand
+```
+install the dependencies an packages
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Run the project 
+to run the project in an using local server 
+```bash
+ng s -o
+```
+after this command a new windows in your defualt browser will open in http://localhost:4200/
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
